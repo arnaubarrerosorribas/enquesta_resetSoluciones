@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        displaySurvey(selectedLanguage);
+        displaySurvey(selectedLanguage)
     });
 
     function displaySurvey(language) {
