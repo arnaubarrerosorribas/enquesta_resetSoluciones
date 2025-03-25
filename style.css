@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.language-selector {
+    margin-bottom: 20px;
+    padding: 8px;
+    font-size: 16px;
+    width: 200px;
+}
+
+.survey-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.survey-title {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.intro-text {
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    margin: 8px 0;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    background-color: #3498db;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-top: 25px;
+}
+
+.question {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: white;
+    border-left: 4px solid #3498db;
+}
+
+.question-code {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.required {
+    color: red;
+    font-size: 0.9em;
+    margin-left: 5px;
+}
+
+.options {
+    margin-top: 8px;
+    margin-left: 15px;
+}
+
+.option {
+    display: block;
+    margin: 5px 0;
+}
+
+.final-text {
+    margin-top: 20px;
+    font-style: italic;
+    text-align: center;
+}
+
+.loading {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}

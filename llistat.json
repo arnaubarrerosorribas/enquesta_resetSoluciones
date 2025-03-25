@@ -1,0 +1,726 @@
+[
+    {
+        "idiomes": {
+            "Català": {
+                "nom_idioma": "Català",
+                "contingut": {
+                    "titol": "ENQUESTA AL PERSONAL ST. PAUL'S",
+                    "introduccio": [
+                        "Volem fer d'aquest centre un excel·lent lloc de treball...",
+                        "Les teves respostes seran tractades de manera CONFIDENCIAL...",
+                        "Cal marcar amb una X la casella...",
+                        "El temps estimat per completar el qüestionari és d'uns de 10 minuts."
+                    ],
+                    "respuestas_comunes": {
+                        "satisfaccion": [
+                            "Molt satisfet",
+                            "Satisfet",
+                            "Ni satisfet / ni insatisfet",
+                            "Insatisfet",
+                            "Molt insatisfet",
+                            "No ho sé"
+                        ],
+                        "recomendacion": [
+                            "Segur que sí",
+                            "Probablement sí",
+                            "M'ho pensaria",
+                            "Probablement no",
+                            "Segur que no"
+                        ],
+                        "acuerdo": [
+                            "Molt d'acord",
+                            "D'acord",
+                            "Ni d'acord, ni en desacord",
+                            "En desacord",
+                            "Molt en desacord"
+                        ]
+                    },
+                    "secciones": [
+                        {
+                            "subtitol": "En relació amb el teu treball, si us plau, valora com estàs de satisfet amb...",
+                            "preguntas": [
+                                {
+                                    "codigo": "1",
+                                    "pregunta": "Fins a quin punt recomanaries St. Paul's School a un amic o familiar teu com a col·legi en el que treballar",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "recomendacion"
+                                },
+                                {
+                                    "codigo": "1.1",
+                                    "pregunta": "L'ambient de treball a St. Paul's School.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "1.2",
+                                    "pregunta": "L'estabilitat i el projecte de futur que m'ofereix St. Paul's.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "1.3",
+                                    "pregunta": "Com s'escolten i acullen les teves iniciatives i idees de millora del projecte.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "1.4",
+                                    "pregunta": "La disponibilitat de mitjans suficients per dur a terme el teu treball.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion",
+                                    "filtrar-fecha-alta": "< 01/09/2023"
+                                }
+                            ]
+                        },
+                        {
+                            "subtitol": "Pel que fa el teu lloc de treball, com estàs de satisfet/a en relació amb...?",
+                            "preguntas": [
+                                {
+                                    "codigo": "2.1",
+                                    "pregunta": "L'ambient de treball entre els teus companys d'etapa / secció",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "2.2",
+                                    "pregunta": "La gestió de l'etapa / secció per part del teu coordinador.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "2.3",
+                                    "pregunta": "La gestió de l'escola per part de la Direcció de St. Paul's",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "2.4",
+                                    "pregunta": "El suport i l'ajuda rebuda per part del centre en els primers mesos de la teva incorporació.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                }
+                            ]
+                        },
+                        {
+                            "subtitol": "Pel que fa a la comunicació, com estàs de satisfet/a en relació amb…?",
+                            "preguntas": [
+                                {
+                                    "codigo": "3.1",
+                                    "pregunta": "La informació rebuda sobre els objectius, projectes i iniciatives generals de St. Paul's School.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "3.2",
+                                    "pregunta": "La informació rebuda respecte als objectius, projectes i iniciatives de la teva etapa / secció.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "3.3",
+                                    "pregunta": "La informació rebuda per part del teu coordinador/a o cap de departament en relació amb el teu acompliment.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                }
+                            ]
+                        },
+                        {
+                            "subtitol": "Pel que fa a les condicions generals del teu lloc de treball, com estàs de satisfet/a amb…?",
+                            "preguntas": [
+                                {
+                                    "codigo": "4.1",
+                                    "pregunta": "El servei d'esmorzar i dinar.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "4.2",
+                                    "pregunta": "En general, les instal·lacions del centre.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                }
+                            ]
+                        },
+                        {
+                            "subtitol": "Pel que fa a les polítiques de formació, com estàs de satisfet/a amb…?",
+                            "preguntas": [
+                                {
+                                    "codigo": "5.1",
+                                    "pregunta": "La quantitat de programes formatius realitzats amb l'objectiu d'actualitzar els teus coneixements i habilitats.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "5.2",
+                                    "pregunta": "La qualitat de programes formatius realitzats amb l'objectiu d'actualitzar els teus coneixements i habilitats.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "5.3",
+                                    "pregunta": "L'interès i suport mostrat pel centre pel teu desenvolupament formatiu.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                }
+                            ]
+                        },
+                        {
+                            "subtitol": "NOMÉS PER A DOCENTS: Fins a quin punt estàs d'acord o en desacord amb les següents afirmacions?",
+                            "preguntas": [
+                                {
+                                    "codigo": "7.1",
+                                    "pregunta": "El nivell d'exigència acadèmica a St. Paul's School és alt.",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "acuerdo",
+                                    "filtro": ["Early Years", "Primaria", "Secundaria", "Batxillerat"]
+                                },
+                                {
+                                    "codigo": "7.13",
+                                    "pregunta": "El coteaching, els grups reduits, els grups de nivell, etc.; em permeten atendre la diversitat.",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "acuerdo",
+                                    "filtro": ["Early Years", "Primaria", "Secundaria", "Batxillerat"]
+                                },
+                                {
+                                    "codigo": "7.2",
+                                    "pregunta": "El nivell de disciplina / educació al centre és alt.",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "acuerdo",
+                                    "filtro": ["Early Years", "Primaria", "Secundaria", "Batxillerat"]
+                                },
+                                {
+                                    "codigo": "7.6",
+                                    "pregunta": "Els departaments són una eina valuosa de millora académica.",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "acuerdo",
+                                    "filtro": ["Early Years", "Primaria", "Secundaria", "Batxillerat"]
+                                },
+                                {
+                                    "codigo": "7.11",
+                                    "pregunta": "Considero que el DOP proporciona orientació de suport als estudiants amb necessitats d'aprenentatge.",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "acuerdo",
+                                    "filtro": ["Early Years", "Primaria", "Secundaria", "Batxillerat"]
+                                },
+                                {
+                                    "codigo": "7.12",
+                                    "pregunta": "El suport per part dels serveis de Secretaria / Administració m'ajuda a desenvolupar millor el meu treball.",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "acuerdo",
+                                    "filtro": ["Early Years", "Primaria", "Secundaria", "Batxillerat"]
+                                }
+                            ]
+                        },
+                        {
+                            "subtitol": "PER A TOTS:",
+                            "preguntas": [
+                                {
+                                    "codigo": "8",
+                                    "pregunta": "En general, quin és el teu nivell de satisfacció amb St. Paul's School com a lloc de treball?",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "9.C",
+                                    "pregunta": "L'Equip Directiu de St. Paul's està elaborant en aquests moments el Pla Estratègic 2025-29. En la teva opinió, quines àrees clau haurien de ser incloses?",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "texto_libre"
+                                },
+                                {
+                                    "codigo": "8.C",
+                                    "pregunta": "Comentaris. Suggeriments.",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "texto_libre"
+                                }
+                            ]
+                        }
+                    ],
+                    "texto_final": [
+                        "Moltes gràcies per participar i pel temps que ens ha dedicat!",
+                        "Avancem junts"
+                    ]
+                }
+            },
+            "Castella": {
+                "nom_idioma": "Español",
+                "contingut": {
+                    "titol": "ENCUESTA AL PERSONAL ST. PAUL'S",
+                    "introduccio": [
+                        "Queremos hacer de este centro un excelente lugar de trabajo...",
+                        "Tus respuestas serán tratadas de manera CONFIDENCIAL...",
+                        "Debes marcar con una X la casilla...",
+                        "El tiempo estimado para completar el cuestionario es de unos 10 minutos."
+                    ],
+                    "respuestas_comunes": {
+                        "satisfaccion": [
+                            "Muy satisfecho",
+                            "Satisfecho",
+                            "Ni satisfecho / ni insatisfecho",
+                            "Insatisfecho",
+                            "Muy insatisfecho",
+                            "No lo sé"
+                        ],
+                        "recomendacion": [
+                            "Seguro que sí",
+                            "Probablemente sí",
+                            "Me lo pensaría",
+                            "Probablemente no",
+                            "Seguro que no"
+                        ],
+                        "acuerdo": [
+                            "Muy de acuerdo",
+                            "De acuerdo",
+                            "Ni de acuerdo, ni en desacuerdo",
+                            "En desacuerdo",
+                            "Muy en desacuerdo"
+                        ]
+                    },
+                    "secciones": [
+                        {
+                            "subtitol": "En relación con tu trabajo, por favor, valora cómo estás de satisfecho con...",
+                            "preguntas": [
+                                {
+                                    "codigo": "1",
+                                    "pregunta": "¿Hasta qué punto recomendarías St. Paul's School a un amigo o familiar tuyo como colegio en el que trabajar?",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "recomendacion"
+                                },
+                                {
+                                    "codigo": "1.1",
+                                    "pregunta": "El ambiente de trabajo en St. Paul's School.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "1.2",
+                                    "pregunta": "La estabilidad y el proyecto de futuro que me ofrece St. Paul's.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "1.3",
+                                    "pregunta": "Cómo se escuchan y acogen tus iniciativas e ideas de mejora del proyecto.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "1.4",
+                                    "pregunta": "La disponibilidad de medios suficientes para llevar a cabo tu trabajo.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion",
+                                    "filtrar-fecha-alta": "< 01/09/2023"
+                                }
+                            ]
+                        },
+                        {
+                            "subtitol": "En cuanto a tu lugar de trabajo, ¿cómo estás de satisfecho/a en relación con...?",
+                            "preguntas": [
+                                {
+                                    "codigo": "2.1",
+                                    "pregunta": "El ambiente de trabajo entre tus compañeros de etapa/sección.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "2.2",
+                                    "pregunta": "La gestión de la etapa/sección por parte de tu coordinador.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "2.3",
+                                    "pregunta": "La gestión de la escuela por parte de la Dirección de St. Paul's.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "2.4",
+                                    "pregunta": "El apoyo y ayuda recibidos por parte del centro en los primeros meses de tu incorporación.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                }
+                            ]
+                        },
+                        {
+                            "subtitol": "En cuanto a la comunicación, ¿cómo estás de satisfecho/a en relación con...?",
+                            "preguntas": [
+                                {
+                                    "codigo": "3.1",
+                                    "pregunta": "La información recibida sobre los objetivos, proyectos e iniciativas generales de St. Paul's School.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "3.2",
+                                    "pregunta": "La información recibida respecto a los objetivos, proyectos e iniciativas de tu etapa/sección.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "3.3",
+                                    "pregunta": "La información recibida por parte de tu coordinador/a o jefe de departamento en relación con tu desempeño.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                }
+                            ]
+                        },
+                        {
+                            "subtitol": "En cuanto a las condiciones generales de tu lugar de trabajo, ¿cómo estás de satisfecho/a con...?",
+                            "preguntas": [
+                                {
+                                    "codigo": "4.1",
+                                    "pregunta": "El servicio de desayuno y comida.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "4.2",
+                                    "pregunta": "En general, las instalaciones del centro.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                }
+                            ]
+                        },
+                        {
+                            "subtitol": "En cuanto a las políticas de formación, ¿cómo estás de satisfecho/a con...?",
+                            "preguntas": [
+                                {
+                                    "codigo": "5.1",
+                                    "pregunta": "La cantidad de programas formativos realizados con el objetivo de actualizar tus conocimientos y habilidades.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "5.2",
+                                    "pregunta": "La calidad de programas formativos realizados con el objetivo de actualizar tus conocimientos y habilidades.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "5.3",
+                                    "pregunta": "El interés y apoyo mostrado por el centro por tu desarrollo formativo.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                }
+                            ]
+                        },
+                        {
+                            "subtitol": "ÚNICAMENTE PARA DOCENTES: ¿Hasta qué punto estás de acuerdo o en desacuerdo con las siguientes afirmaciones?",
+                            "preguntas": [
+                                {
+                                    "codigo": "7.1",
+                                    "pregunta": "El nivel de exigencia académica en St. Paul's School es elevado.",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "acuerdo",
+                                    "filtro": ["Early Years", "Primaria", "Secundaria", "Bachillerato"]
+                                },
+                                {
+                                    "codigo": "7.13",
+                                    "pregunta": "El coteaching, los grupos reducidos, los grupos de nivel, etc.; me permiten atender la diversidad.",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "acuerdo",
+                                    "filtro": ["Early Years", "Primaria", "Secundaria", "Bachillerato"]
+                                },
+                                {
+                                    "codigo": "7.2",
+                                    "pregunta": "El nivel de disciplina/educación en el centro es elevado.",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "acuerdo",
+                                    "filtro": ["Early Years", "Primaria", "Secundaria", "Bachillerato"]
+                                },
+                                {
+                                    "codigo": "7.6",
+                                    "pregunta": "Los departamentos son una herramienta valiosa de mejora académica.",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "acuerdo",
+                                    "filtro": ["Early Years", "Primaria", "Secundaria", "Bachillerato"]
+                                },
+                                {
+                                    "codigo": "7.11",
+                                    "pregunta": "Considero que el DOP proporciona orientación de apoyo a estudiantes con necesidades de aprendizaje.",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "acuerdo",
+                                    "filtro": ["Early Years", "Primaria", "Secundaria", "Bachillerato"]
+                                },
+                                {
+                                    "codigo": "7.12",
+                                    "pregunta": "El apoyo por parte de los servicios de Secretaría/Administración me ayuda a desarrollar mejor mi trabajo.",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "acuerdo",
+                                    "filtro": ["Early Years", "Primaria", "Secundaria", "Bachillerato"]
+                                }
+                            ]
+                        },
+                        {
+                            "subtitol": "PARA TODOS:",
+                            "preguntas": [
+                                {
+                                    "codigo": "8",
+                                    "pregunta": "En general, ¿cuál es tu nivel de satisfacción con St. Paul's School como lugar de trabajo?",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "9.C",
+                                    "pregunta": "El Equipo Directivo de St. Paul's está elaborando en estos momentos el Plan Estratégico 2025-29. En tu opinión, ¿qué áreas clave deberían ser incluidas?",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "texto_libre"
+                                },
+                                {
+                                    "codigo": "8.C",
+                                    "pregunta": "Comentarios. Sugerencias.",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "texto_libre"
+                                }
+                            ]
+                        }
+                    ],
+                    "texto_final": [
+                        "¡Muchas gracias por participar y por el tiempo que nos has dedicado!",
+                        "Avanzamos juntos"
+                    ]
+                }
+            },
+            "Angles": {
+                "nom_idioma": "English",
+                "contingut": {
+                    "titol": "ST. PAUL'S STAFF SURVEY",
+                    "introduccio": [
+                        "We want to make this school an excellent workplace...",
+                        "Your answers will be treated CONFIDENTIALLY...",
+                        "Please mark with an X in the box...",
+                        "The estimated time to complete the questionnaire is about 10 minutes."
+                    ],
+                    "respuestas_comunes": {
+                        "satisfaccion": [
+                            "Very satisfied",
+                            "Satisfied",
+                            "Neither satisfied nor dissatisfied",
+                            "Dissatisfied",
+                            "Very dissatisfied",
+                            "Don't know"
+                        ],
+                        "recomendacion": [
+                            "Definitely yes",
+                            "Probably yes",
+                            "I would think about it",
+                            "Probably not",
+                            "Definitely not"
+                        ],
+                        "acuerdo": [
+                            "Strongly agree",
+                            "Agree",
+                            "Neither agree nor disagree",
+                            "Disagree",
+                            "Strongly disagree"
+                        ]
+                    },
+                    "secciones": [
+                        {
+                            "subtitol": "Regarding your work, please rate how satisfied you are with...",
+                            "preguntas": [
+                                {
+                                    "codigo": "1",
+                                    "pregunta": "To what extent would you recommend St. Paul's School to a friend or family member as a school to work at?",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "recomendacion"
+                                },
+                                {
+                                    "codigo": "1.1",
+                                    "pregunta": "The working environment at St. Paul's School.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "1.2",
+                                    "pregunta": "The stability and future project that St. Paul's offers me.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "1.3",
+                                    "pregunta": "How your initiatives and ideas for project improvement are listened to and welcomed.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "1.4",
+                                    "pregunta": "The availability of sufficient resources to carry out your work.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion",
+                                    "filtrar-fecha-alta": "< 01/09/2023"
+                                }
+                            ]
+                        },
+                        {
+                            "subtitol": "Regarding your workplace, how satisfied are you in relation to...?",
+                            "preguntas": [
+                                {
+                                    "codigo": "2.1",
+                                    "pregunta": "The working environment among your stage/section colleagues.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "2.2",
+                                    "pregunta": "The management of the stage/section by your coordinator.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "2.3",
+                                    "pregunta": "The management of the school by St. Paul's Leadership Team.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "2.4",
+                                    "pregunta": "The support and help received from the school during your first months of joining.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                }
+                            ]
+                        },
+                        {
+                            "subtitol": "Regarding communication, how satisfied are you in relation to...?",
+                            "preguntas": [
+                                {
+                                    "codigo": "3.1",
+                                    "pregunta": "The information received about the general objectives, projects and initiatives of St. Paul's School.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "3.2",
+                                    "pregunta": "The information received regarding the objectives, projects and initiatives of your stage/section.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "3.3",
+                                    "pregunta": "The information received from your coordinator or head of department regarding your performance.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                }
+                            ]
+                        },
+                        {
+                            "subtitol": "Regarding the general conditions of your workplace, how satisfied are you with...?",
+                            "preguntas": [
+                                {
+                                    "codigo": "4.1",
+                                    "pregunta": "The breakfast and lunch service.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "4.2",
+                                    "pregunta": "In general, the school facilities.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                }
+                            ]
+                        },
+                        {
+                            "subtitol": "Regarding training policies, how satisfied are you with...?",
+                            "preguntas": [
+                                {
+                                    "codigo": "5.1",
+                                    "pregunta": "The number of training programs carried out with the aim of updating your knowledge and skills.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "5.2",
+                                    "pregunta": "The quality of training programs carried out with the aim of updating your knowledge and skills.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "5.3",
+                                    "pregunta": "The interest and support shown by the school for your training development.",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                }
+                            ]
+                        },
+                        {
+                            "subtitol": "ONLY FOR TEACHING STAFF: How much do you agree with the following statements?",
+                            "preguntas": [
+                                {
+                                    "codigo": "7.1",
+                                    "pregunta": "The level of academic expectation at St. Paul's School is high.",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "acuerdo",
+                                    "filtro": ["Early Years", "Primary", "Secondary", "Baccalaureate"]
+                                },
+                                {
+                                    "codigo": "7.13",
+                                    "pregunta": "Co-teaching, small groups, streaming groups by levels, etc.; allow me to provide for diversity.",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "acuerdo",
+                                    "filtro": ["Early Years", "Primary", "Secondary", "Baccalaureate"]
+                                },
+                                {
+                                    "codigo": "7.2",
+                                    "pregunta": "The level of discipline/manners in the school is high.",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "acuerdo",
+                                    "filtro": ["Early Years", "Primary", "Secondary", "Baccalaureate"]
+                                },
+                                {
+                                    "codigo": "7.6",
+                                    "pregunta": "The Departments are a valuable tool for academic improvement.",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "acuerdo",
+                                    "filtro": ["Early Years", "Primary", "Secondary", "Baccalaureate"]
+                                },
+                                {
+                                    "codigo": "7.11",
+                                    "pregunta": "I consider that the DOP provides support guidance for students with learning needs.",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "acuerdo",
+                                    "filtro": ["Early Years", "Primary", "Secondary", "Baccalaureate"]
+                                },
+                                {
+                                    "codigo": "7.12",
+                                    "pregunta": "The support I receive from both the secretary's office and administration help me to carry out my job better.",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "acuerdo",
+                                    "filtro": ["Early Years", "Primary", "Secondary", "Baccalaureate"]
+                                }
+                            ]
+                        },
+                        {
+                            "subtitol": "TO EVERYONE:",
+                            "preguntas": [
+                                {
+                                    "codigo": "8",
+                                    "pregunta": "Generally, what is your level of satisfaction with St. Paul's School as a place of work?",
+                                    "obligatori": true,
+                                    "tipo_respuesta": "satisfaccion"
+                                },
+                                {
+                                    "codigo": "9.C",
+                                    "pregunta": "The St. Paul's management team is currently preparing the Strategic Plan for 2025-29. In your opinion, what key areas of focus should be included?",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "texto_libre"
+                                },
+                                {
+                                    "codigo": "8.C",
+                                    "pregunta": "Comments. Suggestions.",
+                                    "obligatori": false,
+                                    "tipo_respuesta": "texto_libre"
+                                }
+                            ]
+                        }
+                    ],
+                    "texto_final": [
+                        "Thank you very much for participating and for the time you have dedicated to us!",
+                        "Moving forward together"
+                    ]
+                }
+            }
+        }
+    }
+]
