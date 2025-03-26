@@ -2,20 +2,26 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Visualizador de Encuesta</title>
+        <title>Encuesta St. Paul's</title>
+        <link rel="stylesheet" href="style.css">
     </head>
-
     <body>
-        <h1>Visualizador de Encuesta</h1>
-
-        <select id="languageSelector" class="language-selector">
-            <option value="">Selecciona un idioma</option>
-        </select>
-
-        <div id="surveyContainer" class="survey-container">
-            <p class="loading">Selecciona un idioma para cargar la encuesta</p>
+        <div class="container">
+            <h1>Encuesta al Personal</h1>
+            
+            <div class="language-selector">
+                <label for="language">Selecciona idioma:</label>
+                <select id="language">
+                    <option value="">-- Selecciona --</option>
+                    <option value="Catalán">Catalán</option>
+                    <option value="Castellano">Castellano</option>
+                    <option value="Inglés">Inglés</option>
+                </select>
+            </div>
+            
+            <div id="survey-container" class="survey-container">
+            </div>
         </div>
 
         <script src="script.js"></script>

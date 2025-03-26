@@ -1,112 +1,112 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const languageSelector = document.getElementById('languageSelector');
-    const surveyContainer = document.getElementById('surveyContainer');
+    const languageSelector = document.getElementById('language');
+    const surveyContainer = document.getElementById('survey-container');
     let surveyData = null;
 
-    // Cargar el JSON externo
+    // Cargar los datos del JSON
     fetch('llistat.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('No se pudo cargar el archivo JSON');
-            }
-            console.log(response)
-            return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
-            surveyData = data;
-            populateLanguageSelector();
+            surveyData = data[0].idiomas;
+            console.log('Datos de la encuesta cargados:', surveyData);
         })
         .catch(error => {
-            surveyContainer.innerHTML = `<p class="error">Error al cargar los datos: ${error.message}</p>`;
-            console.error('Error:', error);
+            console.error('Error al cargar el JSON:', error);
+            surveyContainer.innerHTML = '<p>Error al cargar la encuesta. Por favor, recarga la página.</p>';
         });
 
-        function populateLanguageSelector() {
-            if (!surveyData || !surveyData[0] || !surveyData[0].idiomes) {  // Cambiado a idiomes
-                return;
-            }
-        
-            const languages = Object.keys(surveyData[0].idiomes);
-            languages.forEach(lang => {
-                const option = document.createElement('option');
-                option.value = lang;
-                option.textContent = surveyData[0].idiomes[lang].nom_idioma;  // Cambiado a nom_idioma
-                languageSelector.appendChild(option);
-            });
-        }
-
+    // Manejar el cambio de idioma
     languageSelector.addEventListener('change', function () {
         const selectedLanguage = this.value;
+
         if (!selectedLanguage) {
-            surveyContainer.innerHTML = '<p class="loading">Selecciona un idioma para cargar la encuesta</p>';
+            surveyContainer.innerHTML = '';
             return;
         }
 
-        displaySurvey(selectedLanguage)
+        if (!surveyData) {
+            surveyContainer.innerHTML = '<p>Cargando encuesta...</p>';
+            return;
+        }
+
+        displaySurvey(selectedLanguage);
     });
 
     function displaySurvey(language) {
-        if (!surveyData || !surveyData[0] || !surveyData[0].idiomes[language]) {  // Cambiado a idiomes
-            surveyContainer.innerHTML = '<p class="error">No se encontraron datos para el idioma seleccionado</p>';
+        const languageData = surveyData[language];
+        if (!languageData) {
+            surveyContainer.innerHTML = '<p>No se encontraron datos para el idioma seleccionado.</p>';
             return;
         }
-    
-        const survey = surveyData[0].idiomes[language].contingut;
-        let html = `<h2 class="survey-title">${survey.titulo}</h2>`;
 
-        // Introducción
-        html += '<div class="intro-text">';
-        survey.introduccion.forEach(text => {
-            html += `<p>${text}</p>`;
-        });
-        html += '</div>';
+        const content = languageData.contenido;
 
-        // Secciones
-        survey.secciones.forEach(section => {
-            html += `<div class="section">
-                        <h3 class="section-title">${section.subtitulo}</h3>`;
+        let html = `
+            <div class="survey-title">${content.título}</div>
+            <div class="introduction">
+                ${content.introducción.map(p => `<p>${p}</p>`).join('')}
+            </div>
+        `;
 
-            // Preguntas
+        // Generar las secciones de preguntas
+        content.secciones.forEach(section => {
+            html += `
+                <div class="section">
+                    <h3 class="section-title">${section.subtítulo}</h3>
+            `;
+
             section.preguntas.forEach(question => {
-                html += `<div class="question">
-                            <div>
-                                <span class="question-code">${question.codigo}.</span>
-                                ${question.pregunta}
-                                ${question.obligatoria ? '<span class="required">(Obligatoria)</span>' : ''}
-                            </div>`;
-
-                // Mostrar opciones de respuesta si no es texto libre
-                if (question.tipo_respuesta !== 'texto_libre') {
-                    const options = survey.respuestas_comunes[question.tipo_respuesta];
-                    if (options) {
-                        html += '<div class="options">';
-                        options.forEach(option => {
-                            html += `<div class="option">
-                                        <input type="radio" name="q${question.codigo}" id="q${question.codigo}_${option}">
-                                        <label for="q${question.codigo}_${option}">${option}</label>
-                                    </div>`;
-                        });
-                        html += '</div>';
-                    }
-                } else {
-                    html += '<div class="options">';
-                    html += `<textarea rows="4" style="width: 100%;"></textarea>`;
-                    html += '</div>';
-                }
-
-                html += '</div>'; // Cierre de pregunta
+                html += `
+                    <div class="question">
+                        <div class="question-text">
+                            ${question.pregunta}
+                            ${question.obligatorio ? '<span class="required">*</span>' : ''}
+                        </div>
+                        ${question.filtrar_fecha_alta ? `<div class="filter-note">(Aplica solo para personal con fecha de alta ${question.filtrar_fecha_alta})</div>` : ''}
+                        ${renderQuestionOptions(question, content.respuestas_comunes)}
+                    </div>
+                `;
             });
 
-            html += '</div>'; // Cierre de sección
+            html += `</div>`;
         });
 
-        // Texto final
-        html += '<div class="final-text">';
-        survey.texto_final.forEach(text => {
-            html += `<p>${text}</p>`;
-        });
-        html += '</div>';
+        // Añadir el texto final
+        html += `
+            <div class="footer">
+                ${content.texto_final.map(p => `<p>${p}</p>`).join('')}
+            </div>
+        `;
 
         surveyContainer.innerHTML = html;
+    }
+
+    function renderQuestionOptions(question, commonAnswers) {
+        const answerType = question.tipo_respuesta;
+        const answers = commonAnswers[answerType];
+
+        if (answerType === 'texto_libre') {
+            return `<textarea class="text-input" rows="3" ${question.obligatorio ? 'required' : ''}></textarea>`;
+        }
+
+        if (!answers) {
+            return '<p>Error: tipo de respuesta no válido</p>';
+        }
+
+        let optionsHtml = '<div class="options">';
+
+        answers.forEach((answer, index) => {
+            const inputId = `q${question.código}_opt${index}`;
+            optionsHtml += `
+                <div class="option">
+                    <input type="radio" id="${inputId}" name="q${question.código}" value="${index}" 
+                           ${question.obligatorio ? 'required' : ''}>
+                    <label for="${inputId}">${answer}</label>
+                </div>
+            `;
+        });
+
+        optionsHtml += '</div>';
+        return optionsHtml;
     }
 });
