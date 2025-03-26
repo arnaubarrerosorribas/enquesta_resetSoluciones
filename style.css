@@ -131,3 +131,63 @@ h1 {
     font-style: italic;
     margin-top: 5px;
 }
+
+.pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+}
+
+.pagination-controls button {
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.pagination-controls button:hover {
+    background-color: #2980b9;
+}
+
+.pagination-controls button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+.progress-indicator {
+    text-align: center;
+    font-size: 14px;
+    color: #7f8c8d;
+    margin: 10px 0;
+}
+
+.section-navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.section-nav-button {
+    padding: 5px 10px;
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.section-nav-button:hover {
+    background-color: #d6eaf8;
+}
+
+.section-nav-button.active {
+    background-color: #3498db;
+    color: white;
+    border-color: #2980b9;
+}
