@@ -1,0 +1,99 @@
+<paisos>
+    <pais continent="Europa" area="55169">
+        <nom codi="FR">França</nom>
+        <capital hab="1234">Paris</capital>
+        <poblacio any="1992">3456</poblacio>
+        <moneda simbol="€">euro</moneda>
+        <idiomes>
+            <idioma>francès</idioma>
+            <idioma>catala</idioma>
+        </idiomes>
+        <ciutat hab="123">Marsella</ciutat>
+        <ciutat hab="456">Lio</ciutat>
+        <ciutat hab="987">Montpelier</ciutat>
+    </pais>
+
+    <pais continent="Africa" area="876543">
+        <nom codi="EG">Egipte</nom>
+        <capital hab="12345t6">El Caire</capital>
+        <poblacio any="1234">1234</poblacio>
+        <moneda simbol="£">lira</moneda>
+        <idiomes>
+            <idioma>arab</idioma>
+        </idiomes>
+        <ciutat hab="123">El Caire</ciutat>
+        <ciutat hab="456">Alexandria</ciutat>
+        <ciutat hab="987">Luxor</ciutat>
+    </pais>
+</paisos>
+
+
+1) Nom de tots els països d'america
+a) //pais[continent="@America"]/nom
+✔ b) //pais/nom[../@continent="America"]
+c) //pais/pais[@continent="America"]/nom
+d) Cap de les anteriors
+
+2) Any en que es va prendre la població dels paisos on es parla catala
+a) //paisos/pais[idiomes/idioma="catala"]/poblacio/@any
+b) //catala/../../poblacio/@any
+c) /paisos/pais[nom="Espanya"]/poblacio/@any
+✔ d) Cap de les anteriors
+
+3) Nom de tots els paisos que tenen la capital amb publacio superior al milió.
+✔ a) //paisos/pais[capital/@hab>1000000]/nom
+b) //paisos/pais[capital/@hab>1000000]/nom/text()
+c) //paisos/pais[capital/@hab>1000000]/nom/text
+d) Cap de les anteriors
+
+4) Codis dels paisos on es parla més d'un idioma
+a) count(//pais[(idiomes/idioma)>1]/nom/@codi)
+✔ b) //@codi[count(../../idiomes/idioma)>1]
+c) //pais/idiomes[count(idioma)>1]/nom/@codi
+d) Cap de les anteriors
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:output method="html" encoding="UTF-8" />
+        <html>
+            <head>
+                <title>Països d'Europa més poblats</title>
+            </head>
+            <body>
+                <h2>Els 10 països d'Europa més poblats</h2>
+                <table>
+                    <tr>
+                        <th>País</th>
+                        <th>Àrea (km²)</th>
+                        <th>Població</th>
+                        <th>Ciutat més poblada (no capital)</th>
+                    </tr>
+
+                    <xsl:for-each select="//pais[@continent='Europa']">
+                        <xsl:sort select="poblacio" data-type="number" order="descending" />
+                        <xsl:if
+                            test="position() &lt;= 10">
+                            <tr>
+                                <td>
+                                    <xsl:value-of select="nom" />
+                                </td>
+                                <td>
+                                    <xsl:value-of select="@area" />
+                                </td>
+                                <td>
+                                    <xsl:value-of select="poblacio" />
+                                </td>
+
+                                <td>
+                                    <xsl:variable name="maxHab" select="max(ciutat/@hab)" />
+                                    <xsl:value-of select="ciutat[@hab=$maxHab]" />
+                                </td>
+                            </tr>
+                        </xsl:if>
+                    </xsl:for-each>
+                </table>
+            </body>
+        </html>
+    </xsl:template>
+</xsl:stylesheet>
